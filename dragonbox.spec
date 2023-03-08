@@ -14,6 +14,9 @@ BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRequires:	libstdc++-devel >= 6:7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+# only static library, debuginfo not supported
+%define		_enable_debug_packages	0
+
 %description
 This library is a reference implementation of Dragonbox in C++.
 
